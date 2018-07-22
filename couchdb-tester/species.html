@@ -1,0 +1,354 @@
+<html>
+	<head>
+		<title>ALA species to n-triples</title>
+		<meta charset="UTF-8"/>
+		<script src="jquery.js"></script>
+		<script src="jsonld.js"></script>
+		<script src="viz.js"></script>
+		<!-- stuff below needs to go into CouchDB views -->
+		<script src="shared.js"></script>
+		<script src="language.js"></script>
+		<style>
+		td { border: 1px solid red; }
+		</style>
+	</head>
+<body>
+
+<h1>ALA species to n-triples</h1>
+
+<div>
+	<div style="width:100%;height:auto;">
+		<h2>JSON</h2>
+			<!-- JSON for data object goes below -->
+			<textarea id="json" style="width:100%;background-color:#224FBC;color:#FFFF66;" rows="20">{
+  "_id": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+  "_rev": "1-6b5785e948b40dc6efc48b97f4b48002",
+  "message": {
+    "taxonConcept": {
+      "guid": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+      "parentGuid": "urn:lsid:biodiversity.org.au:afd.taxon:c46801ab-2ff2-4e92-8445-cda82a83dd97",
+      "nameString": "Intellagama",
+      "nameComplete": "Intellagama Wells & Wellington, 1985",
+      "nameFormatted": "<span class=\"scientific-name rank-genus\"><span class=\"name\">Intellagama</span> <span class=\"author\">Wells &amp; Wellington, 1985</span></span>",
+      "author": "Wells & Wellington, 1985",
+      "nomenclaturalCode": "ICZN",
+      "taxonomicStatus": "accepted",
+      "nomenclaturalStatus": null,
+      "rankString": "genus",
+      "nameAuthority": "AFD",
+      "rankID": 6000,
+      "nameAccordingTo": null,
+      "nameAccordingToID": null,
+      "namePublishedIn": "Amey, A.P., Couper, P.J. & Shea, G.M. 2012, \"Intellagama lesueurii (Gray, 1831), the correct binomial combination for the Australian Eastern Water Dragon (Sauria, Agamidae)\", Zootaxa, vol. 3390, pp. 65–67",
+      "namePublishedInYear": "2012",
+      "namePublishedInID": null,
+      "infoSourceURL": "http://biodiversity.org.au/afd.taxon/f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+      "datasetURL": "https://collections.ala.org.au/public/show/dr2699",
+      "taxonConceptID": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+      "scientificNameID": "urn:lsid:biodiversity.org.au:afd.name:267718"
+    },
+    "taxonName": [],
+    "classification": {
+      "kingdom": "ANIMALIA",
+      "kingdomGuid": "urn:lsid:biodiversity.org.au:afd.taxon:4647863b-760d-4b59-aaa1-502c8cdf8d3c",
+      "orderGuid": "urn:lsid:biodiversity.org.au:afd.taxon:ce3a5d30-60ec-4e53-9803-b514b88ddbca",
+      "order": "SQUAMATA",
+      "suborder": "LACERTILIA",
+      "class": "REPTILIA",
+      "phylum": "CHORDATA",
+      "subclass": "LEPIDOSAURIA",
+      "suborderGuid": "urn:lsid:biodiversity.org.au:afd.taxon:6ac03c60-d04f-43d3-a450-2dd16181f264",
+      "family": "AGAMIDAE",
+      "classGuid": "urn:lsid:biodiversity.org.au:afd.taxon:682e1228-5b3c-45ff-833b-550efd40c399",
+      "familyGuid": "urn:lsid:biodiversity.org.au:afd.taxon:c46801ab-2ff2-4e92-8445-cda82a83dd97",
+      "phylumGuid": "urn:lsid:biodiversity.org.au:afd.taxon:065f1da4-53cd-40b8-a396-80fa5c74dedd",
+      "subclassGuid": "urn:lsid:biodiversity.org.au:afd.taxon:eaeda00f-6bd6-4d20-ad52-da6c428c2378",
+      "scientificName": "Intellagama",
+      "guid": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+      "genus": "Intellagama",
+      "genusGuid": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a"
+    },
+    "synonyms": [],
+    "commonNames": [],
+    "imageIdentifier": "48888f07-16a8-493e-8d4a-3cff1406fd77",
+    "conservationStatuses": {},
+    "extantStatuses": [],
+    "habitats": [],
+    "categories": [],
+    "simpleProperties": [],
+    "images": [],
+    "identifiers": [
+      {
+        "identifier": "urn:lsid:biodiversity.org.au:afd.taxon:358d1381-4e3e-4979-b61c-34f300bcc64f",
+        "nameString": "Previous AFD LSID",
+        "status": "replaced",
+        "subject": null,
+        "format": "lsid",
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/358d1381-4e3e-4979-b61c-34f300bcc64f",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699"
+      },
+      {
+        "identifier": "urn:lsid:biodiversity.org.au:afd.taxon:4f1c446b-7e10-4cd4-872d-eed3e79423cd",
+        "nameString": "Previous AFD LSID",
+        "status": "replaced",
+        "subject": null,
+        "format": "lsid",
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/4f1c446b-7e10-4cd4-872d-eed3e79423cd",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699"
+      },
+      {
+        "identifier": "urn:lsid:biodiversity.org.au:afd.taxon:9432caf8-d208-485c-a68f-1cd3d38db9b6",
+        "nameString": "Previous AFD LSID",
+        "status": "replaced",
+        "subject": null,
+        "format": "lsid",
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/9432caf8-d208-485c-a68f-1cd3d38db9b6",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699"
+      },
+      {
+        "identifier": "urn:lsid:biodiversity.org.au:afd.taxon:fa424123-534c-4d04-91f2-7ee8ab00b2d4",
+        "nameString": "Previous AFD LSID",
+        "status": "replaced",
+        "subject": null,
+        "format": "lsid",
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/fa424123-534c-4d04-91f2-7ee8ab00b2d4",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699"
+      },
+      {
+        "identifier": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+        "nameString": "Taxon",
+        "status": "current",
+        "subject": null,
+        "format": null,
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699"
+      },
+      {
+        "identifier": "urn:lsid:biodiversity.org.au:afd.name:267718",
+        "nameString": "Scientific Name",
+        "status": "current",
+        "subject": null,
+        "format": null,
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699"
+      },
+      {
+        "identifier": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+        "nameString": "Taxon Concept",
+        "status": "current",
+        "subject": null,
+        "format": null,
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699"
+      }
+    ],
+    "variants": [
+      {
+        "nameString": "Intellagama",
+        "nameComplete": "Intellagama Wells & Wellington, 1985",
+        "nameFormatted": "<span class=\"scientific-name rank-genus\"><span class=\"name\">Intellagama</span> <span class=\"author\">Wells &amp; Wellington, 1985</span></span>",
+        "identifier": "urn:lsid:biodiversity.org.au:afd.taxon:f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+        "nomenclaturalCode": "ICZN",
+        "taxonomicStatus": "accepted",
+        "nomenclaturalStatus": null,
+        "nameAccordingTo": null,
+        "nameAccordingToID": null,
+        "namePublishedIn": "Amey, A.P., Couper, P.J. & Shea, G.M. 2012, \"Intellagama lesueurii (Gray, 1831), the correct binomial combination for the Australian Eastern Water Dragon (Sauria, Agamidae)\", Zootaxa, vol. 3390, pp. 65–67",
+        "namePublishedInYear": "2012",
+        "namePublishedInID": null,
+        "nameAuthority": "AFD",
+        "infoSourceName": "AFD",
+        "infoSourceURL": "http://biodiversity.org.au/afd.taxon/f171c20e-3cc4-4541-9e59-c7f1a4e85e3a",
+        "datasetURL": "https://collections.ala.org.au/public/show/dr2699",
+        "priority": 5000
+      }
+    ]
+  }
+}</textarea>
+			<br />
+			<button onclick="convert()">Convert JSON to RDF</button>
+	</div>
+	<div style="clear:both;"></div>
+	
+	<div style="width:100%;">
+		<h2>Triples</h2>
+		<div id="output" style="width:100%;background-color:#FF7;color:#222;overflow:auto;"></div>
+		<h2>Graph</h2>
+		<div id="graph" style="width:100%;overflow:auto;"></div>
+		<h2>JSON-LD</h2>
+		<div id="jsonld" style="width:100%;white-space:pre;background-color:#333;color:white;overflow:auto;"></div>
+
+</div>			
+			
+		
+		
+		
+<script>
+	
+//----------------------------------------------------------------------------------------
+// START COUCHDB VIEW
+function message(doc) {
+  if (doc.message) {
+
+    
+    var subject_id = 'https://bie.ala.org.au/species/' + doc._id;
+        
+    var triples = [];   
+    
+    // type
+    
+	  triples.push(triple(
+	  	subject_id,
+		'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
+		'http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept'
+		));
+	  
+
+		/* dwc
+	  triples.push(triple(
+	  	subject_id,
+		'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
+		'http://rs.tdwg.org/dwc/terms/Taxon'
+		));
+	  
+	  */
+     
+    for (var i in doc.message.taxonConcept) {
+      switch (i) {
+      
+        
+        case 'guid':
+           // UUID and LSID if we have them
+           if (doc.message.taxonConcept[i].match(/urn:lsid:biodiversity.org.au:afd.taxon:/)) {
+           
+              // LSID
+              triples.push(triple(subject_id,
+                'http://schema.org/identifier',
+                doc.message.taxonConcept[i]));
+              
+              // UUID
+              var uuid = doc.message.taxonConcept[i].replace(/urn:lsid:biodiversity.org.au:afd.taxon:/, '');
+              triples.push(triple(subject_id,
+                'http://schema.org/identifier',
+                uuid));
+            }
+       	   break;
+
+        case 'parentGuid':
+          if (doc.message.taxonConcept[i]) {
+          triples.push(triple(subject_id,
+            'http://www.w3.org/2000/01/rdf-schema#subClassOf',
+            'https://bie.ala.org.au/species/' + doc.message.taxonConcept[i]));
+          }
+			/* dwc
+          triples.push(triple(subject_id,
+            'http://rs.tdwg.org/dwc/terms/parentNameUsageID',
+            'https://bie.ala.org.au/species/' + doc.message.taxonConcept[i]));
+           */
+           break;
+  
+        case 'nameString':
+           triples.push(triple(subject_id,
+            'http://rs.tdwg.org/ontology/voc/TaxonConcept#nameString',
+            doc.message.taxonConcept[i]));
+
+			/* dwc
+          triples.push(triple(subject_id,
+            'http://rs.tdwg.org/dwc/terms/scientificName',
+            doc.message.taxonConcept[i]));
+            */
+          break;
+          
+        case 'nameComplete':
+          triples.push(triple(subject_id,
+            'http://schema.org/name',
+            doc.message.taxonConcept[i]));
+         break;          
+          
+        case 'rankString':
+          triples.push(triple(subject_id,
+            'http://rs.tdwg.org/dwc/terms/taxonRank',
+            doc.message.taxonConcept[i]));
+          break;
+
+        default:
+          break;
+      }
+    }
+    
+    
+    // https://images.ala.org.au/store/7/7/d/f/48888f07-16a8-493e-8d4a-3cff1406fd77/original
+    // image URL is last four characters in UUID in reverse order, separated by /, then UUID, then /original (sigh)
+    
+    if (doc.message.imageIdentifier) {
+       var image_id = 'urn:uuid:' + doc.message.imageIdentifier;
+       
+          triples.push(triple(subject_id,
+            'http://schema.org/image',
+            image_id));
+            
+         // type
+		 triples.push(triple(
+				image_id,
+				'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
+				'http://schema.org/ImageObject'
+				));         
+            
+          // uuid
+          triples.push(triple(image_id,
+            'http://schema.org/identifier',
+            doc.message.imageIdentifier));
+          
+          // thumbnail (bytes)
+          triples.push(triple(image_id,
+            'http://schema.org/thumbnailUrl',
+            'URILITERALhttps://images.ala.org.au/image/proxyImageThumbnail?imageId=' + doc.message.imageIdentifier));
+ 
+ 		 // image (bytes)
+          triples.push(triple(image_id,
+            'http://schema.org/contentUrl',
+            'URILITERALhttps://images.ala.org.au/image/proxyImage?imageId=' + doc.message.imageIdentifier));    	
+
+			// web page with image
+          triples.push(triple(image_id,
+            'http://schema.org/url',
+            'URILITERALhttps://images.ala.org.au/image/details?imageId=' + doc.message.imageIdentifier));    	
+
+    }
+    
+    output(doc, triples);
+  }
+}
+
+function couchdb(doc) {
+  if (doc.message.taxonConcept) {
+    message(doc);
+  }
+}
+// END COUCHDB VIEW
+
+		
+//----------------------------------------------------------------------------------------
+function convert() {
+	var json = $('#json').val();
+	var doc = JSON.parse(json);
+	
+	console.log(JSON.stringify(doc, null, 2));
+	
+	couchdb(doc);
+}
+
+	
+	</script>		
+			
+
+</div>
+</body>
+</html>			
