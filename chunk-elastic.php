@@ -16,7 +16,7 @@ $basename = 'ala';
 $count = 0;
 $total = 0;
 
-$chunksize = 50000;
+$chunksize = 20000;
 
 $rows = array();
 
@@ -30,8 +30,6 @@ while (!feof($file_handle) && !$done)
 	
 	if ($jsonl != '')
 	{	
-	
-	
 		$doc = json_decode($jsonl);
 		unset($doc->type);
 		
@@ -45,7 +43,7 @@ while (!feof($file_handle) && !$done)
 		$meta->index->_type = '_doc';
 		
 		// Earlier versions
-		$meta->index->_type = 'thing';
+		//$meta->index->_type = 'thing';
 		
 		// Request
 		$doc->search_result_data->id = 'https://bie.ala.org.au/species/' . $doc->id;
@@ -63,7 +61,7 @@ while (!feof($file_handle) && !$done)
 		
 		$chunk_files[] = $output_filename;
 		
-		file_put_contents($output_filename, join("\n", $rows));
+		file_put_contents($output_filename, join("\n", $rows)  . "\n");
 		
 		$count = 0;
 		$rows = array();
@@ -86,7 +84,7 @@ if (count($rows) > 0)
 	
 	$chunk_files[] = $output_filename;
 	
-	file_put_contents($output_filename, join("\n", $rows));
+	file_put_contents($output_filename, join("\n", $rows)  . "\n");
 }
 
 echo "--- curl upload.sh ---\n";
@@ -95,9 +93,16 @@ foreach ($chunk_files as $filename)
 {
 	$curl .= "echo '$filename'\n";
 	
-	$url = 'http://130.209.46.63/_bulk';
-		
-	$curl .= "curl $url -XPOST --data-binary '@$filename'  --progress-bar | tee /dev/null\n";
+	$url = 'http://130.209.46.63/_bulk';	
+
+	$url = 'http://user:7WbQZedlAvzQ@35.204.73.93/elasticsearch/ala/_bulk';
+	
+	// old
+	//$curl .= "curl $url -XPOST --data-binary '@$filename'  --progress-bar | tee /dev/null\n";
+	
+	// 6
+	$curl .= "curl $url -H 'Content-Type: application/x-ndjson' -XPOST --data-binary '@$filename'  --progress-bar | tee /dev/null\n";
+
 	$curl .= "echo ''\n";
 }
 

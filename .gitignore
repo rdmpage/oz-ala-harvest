@@ -1,13 +1,8 @@
 
 taxa.nt
 missed.csv
-taxa-0.nt
-taxa-1000000.nt
-taxa-1500000.nt
-taxa-500000.nt
-ala.jsonl
-ala-203653.json
-ala-150000.json
-ala-100000.json
-ala-200000.json
-ala-50000.json
+taxa-*.nt
+*.jsonl
+ala-*.json
+
+*.sql
