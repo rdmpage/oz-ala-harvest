@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseURL</key>
+	<string>http://65.108.58.109:9200/ala/_doc/10000901</string>
+	<key>bodyString</key>
+	<string>{"doc":{"id":"10000901","search_result_data":{"name":"&lt;span class=\"scientific-name rank-unknown\"&gt;&lt;span class=\"name\"&gt;Sponges: Crusts&lt;\/span&gt;&lt;\/span&gt;","description":"ANIMALIA, PORIFERA","id":"https:\/\/bie.ala.org.au\/species\/10000901"},"search_data":{"classification":["ANIMALIA","PORIFERA"],"type":["Taxon"],"fulltext":"Sponges: Crusts","fulltext_boosted":"Sponges: Crusts"}}}
+</string>
+	<key>followRedirect</key>
+	<true/>
+	<key>handleJSONPCallbacks</key>
+	<false/>
+	<key>headers</key>
+	<array>
+		<dict>
+			<key>header</key>
+			<string>Content-Type</string>
+			<key>inUse</key>
+			<true/>
+			<key>value</key>
+			<string>application/json</string>
+		</dict>
+	</array>
+	<key>httpMethod</key>
+	<string>POST</string>
+	<key>jsonpScript</key>
+	<string></string>
+	<key>paramBodyUIChoice</key>
+	<integer>0</integer>
+	<key>parameters</key>
+	<array/>
+	<key>parametersType</key>
+	<integer>0</integer>
+	<key>presentBeforeChallenge</key>
+	<true/>
+	<key>stringEncoding</key>
+	<integer>4</integer>
+	<key>username</key>
+	<string>user</string>
+	<key>usingHTTPBody</key>
+	<true/>
+</dict>
+</plist>

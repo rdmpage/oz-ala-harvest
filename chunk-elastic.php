@@ -40,7 +40,7 @@ while (!feof($file_handle) && !$done)
 		$meta->index->_id = $doc->id;
 		
 		// v. 6		
-		$meta->index->_type = '_doc';
+		//$meta->index->_type = '_doc';
 		
 		// Earlier versions
 		//$meta->index->_type = 'thing';
@@ -95,6 +95,8 @@ foreach ($chunk_files as $filename)
 	
 	$url = 'http://130.209.46.63/_bulk';	
 
+	$url = 'http://user:7WbQZedlAvzQ@35.204.73.93/elasticsearch/ala/_bulk';
+	
 	$url = 'http://user:7WbQZedlAvzQ@35.204.73.93/elasticsearch/ala/_bulk';
 	
 	// old
