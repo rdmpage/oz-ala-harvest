@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>http://130.209.46.63/ala/</string>
+	<string>http://65.108.58.109:9200/ala/</string>
 	<key>bodyString</key>
 	<string>{}</string>
 	<key>followRedirect</key>
